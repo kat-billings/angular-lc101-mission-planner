@@ -18,4 +18,5 @@
 </ul>
 <input #name type="text"/>
 <label>First mission<input #firstMission type="checkbox"/></label>
-<button (click)="add(name.value, firstMission.checked)">Add</button>
+<button (click)="message = add(name.value, firstMission.checked)">Add</button>
+<p class = "error" *ngIf = "message">{{message}}</p>
